@@ -11,27 +11,39 @@ package model;
 public class Carro {
 
     private String marca;
+    private String placa;
     private String modelo;
     private int anoFab;
-    private int cor;
+    private int anoModelo;
     private String tpCambio;
     private String combustivel;
     private Pessoa propreitario;//agregacao da classe model Pessoa com carro
 
+    public String getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+    
+
     public Carro() {
     }
 
-    public Carro(String marca, String modelo, int anoFab, int cor, String tpCambio, String combustivel, Pessoa propreitario) {
+    public Carro(String marca, String placa, String modelo, int anoFab, int cor, String tpCambio, String combustivel, Pessoa propreitario) {
         this.marca = marca;
+        this.placa = placa;
         this.modelo = modelo;
         this.anoFab = anoFab;
-        this.cor = cor;
+        this.anoModelo = cor;
         this.tpCambio = tpCambio;
         this.combustivel = combustivel;
         this.propreitario = propreitario;
     }
 
-    public String getMarca() {
+   
+       public String getMarca() {
         return marca;
     }
 
@@ -55,12 +67,12 @@ public class Carro {
         this.anoFab = anoFab;
     }
 
-    public int getCor() {
-        return cor;
+    public int getanoModelo() {
+        return anoModelo;
     }
 
-    public void setCor(int cor) {
-        this.cor = cor;
+    public void setAnoModelo(int anoModelo) {
+        this.anoModelo = anoModelo;
     }
 
     public String getTpCambio() {
@@ -89,7 +101,7 @@ public class Carro {
 
     @Override
     public String toString() {
-        return "Carro{" + "marca=" + marca + ", modelo=" + modelo + ", anoFab=" + anoFab + ", cor=" + cor + ", tpCambio=" + tpCambio + ", combustivel=" + combustivel + ", propreitario=" + propreitario + '}';
+        return "Carro{" + "placa=" + placa+ "marca=" + marca + ", modelo=" + modelo + ", anoFab=" + anoFab + ", anoModelo=" + anoModelo + ", tpCambio=" + tpCambio + ", combustivel=" + combustivel + ", propreitario=" + propreitario + '}';
     }
 
     
